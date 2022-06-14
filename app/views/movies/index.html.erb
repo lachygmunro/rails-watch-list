@@ -1,5 +1,7 @@
 <div class="movies">
 <h1>Movies</h1>
+<%= link_to 'Add movie', new_movie_path(@movie)%>
+<%= link_to 'View lists', lists_path %>
 <div class="movie-list">
 <div class="row">
 <% @movies.each do |movie| %>
@@ -10,6 +12,8 @@
     <h5><%= movie.title %></h5>
     <p class="card-text"><%= movie.overview %></p>
     <p class="card-rating">Rating: <%= movie.rating %></p>
+    <%= link_to "Delete", movie_path(movie), method: :delete, data: { confirm: "Are you sure?" } %>
+    <%= link_to "Edit", movie_path(movie) %>
   </div>
 </div>
 </div>

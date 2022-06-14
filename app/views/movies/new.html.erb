@@ -1,0 +1,10 @@
+<div>
+  <h1>Create a movie</h1>
+  <%= simple_form_for [ @movie ] do |f| %>
+    <%= f.input :title %>
+    <%= f.input :overview %>
+    <%= f.input :rating %>
+    <%= f.input :poster_url %>
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>

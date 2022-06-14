@@ -1,0 +1,14 @@
+<div>
+<h1><%= @movie.title %></h1>
+</div>
+
+<div>
+  <%= image_tag @movie.poster_url %>
+  <div>
+    <h4><%= @movie.title %></h4>
+    <h5>Rating: <%= @movie.rating %></h5>
+    <p><%= @movie.overview %></p>
+    <%= link_to 'Edit', edit_movie_path(@movie)  %>
+    <%= link_to "Delete", movie_path(@movie), method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+</div>
