@@ -1,5 +1,5 @@
+<div style="background-image: url('<%= cl_image_path(@list.photo.key) if @list.photo.attached? %>')">
 <h1><%= @list.name %></h1>
-
 <h2>Bookmarks</h2>
 <ul>
 <% @bookmarks.each do |bookmark| %>
@@ -14,3 +14,4 @@
 <br>
 <%= link_to 'Back', lists_path %>
 <%= button_to 'Delete List', list_path(@list), method: :delete, data: { confirm: "Are you sure you want to delete this list?" } %>
+</div>
