@@ -2,6 +2,6 @@
 <%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.association :movie %>
   <%= f.input :comment %>
-  <%= f.submit 'Submit' %>
+  <%= f.submit 'Submit', class: "btn btn-primary" %>
 <% end %>
 <%= link_to 'See movies', movies_path %>
